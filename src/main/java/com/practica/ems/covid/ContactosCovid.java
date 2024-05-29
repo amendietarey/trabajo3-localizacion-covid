@@ -1,12 +1,10 @@
 package com.practica.ems.covid;
 
-
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.util.ArrayList;
-import java.util.Iterator;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.List;
+import java.util.stream.Stream;
 
 import com.practica.excecption.EmsDuplicateLocationException;
 import com.practica.excecption.EmsDuplicatePersonException;
