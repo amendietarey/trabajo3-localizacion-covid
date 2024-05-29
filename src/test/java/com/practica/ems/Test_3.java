@@ -3,8 +3,6 @@ package com.practica.ems;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-import java.io.IOException;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -14,13 +12,15 @@ import com.practica.excecption.EmsDuplicateLocationException;
 import com.practica.excecption.EmsDuplicatePersonException;
 import com.practica.excecption.EmsInvalidNumberOfDataException;
 import com.practica.excecption.EmsInvalidTypeException;
+import com.practica.excecption.EmsLocalizationNotFoundException;
+import com.practica.excecption.EmsPersonNotFoundException;
 import com.practica.genericas.FechaHora;
 
 public class Test_3 {
 	private static ContactosCovid contactosCovid;
 
 	@BeforeEach
-	void setUp() throws EmsInvalidTypeException, EmsInvalidNumberOfDataException, EmsDuplicatePersonException, EmsDuplicateLocationException, IOException {		
+	void setUp() {		
 		contactosCovid = new ContactosCovid();
 		contactosCovid.loadDataFile("datos2.txt", false);
 	}
